@@ -1,0 +1,17 @@
+.wrapperProducts {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  justify-content: center;
+
+  align-items: center;
+  text-align: center;
+  border: 1px solid lightgray;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.wrapperProducts img {
+  width: 100%;
+  height: 30%;
+}

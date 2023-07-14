@@ -22,6 +22,9 @@ export default function Main() {
           <li>
             <Link href="/login">Login</Link>
           </li>
+          <li>
+            <Link href="/products">Products</Link>
+          </li>
         </ul>
       </div>
     </>
