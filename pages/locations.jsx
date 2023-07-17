@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { roomList } from "@/utils/reservations";
+import { GeneralContext } from ".";
 
 const Locations = () => {
+  const context = useContext(GeneralContext);
+  console.log(context);
+
+  const idGen = Math.floor(Math.random() * 100);
+
   return (
     <div className="wrapper">
       <h1> Locations </h1>
@@ -9,7 +15,7 @@ const Locations = () => {
       {roomList.map((room) => (
         <div className="roomElement">
           <h3>{room.name}</h3>
-          <img src={room.imageLocation} alt="Hotel" />
+          <img key={idGen} src={room.imageLocation} alt="Hotel" />
           <p>Availability: {room.availability ? "✅" : "❌"}</p>
         </div>
       ))}

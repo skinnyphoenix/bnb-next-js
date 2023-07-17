@@ -1,6 +1,21 @@
 import Link from "next/link";
-import React from "react";
+import React, { createContext } from "react";
 import styles from "../styles/main.module.css";
+
+export const GeneralContext = createContext({
+  user: {
+    name: "Giovanni",
+    surname: "Geraci",
+    age: 23,
+  },
+
+  reservationList: [
+    {
+      id: Math.floor(Math.random() * 100),
+      numReservation: Math.floor(Math.random() * 100),
+    },
+  ],
+});
 
 export default function Main() {
   return (
